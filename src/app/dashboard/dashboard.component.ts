@@ -150,19 +150,6 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  // openMovie(element: MovieElement, enterAnimationDuration: string, exitAnimationDuration: string): void  {
-  //   const dialogRef = this.dialog.open(ElementMovieComponent, {
-  //     width: '400px',
-  //     enterAnimationDuration,
-  //     exitAnimationDuration,
-  //   });
-  //   console.log(element)
-
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log(`Dialog result: ${result}`);
-  //   });
-  // }
-
   logout(){
     this.angularFireAuth.signOut();
     this.router.navigate(['/login'])
@@ -198,17 +185,17 @@ export class DashboardComponent implements OnInit {
         } else {
         const db = getDatabase();
         const filmesId = Date.now();
-
+        set(ref(db, 'filmes/' + filmesId), {
+          titulo: result.atores,
+          lancamento: result.lancamento,
+          genero: result.genero,
+          diretor: result.diretor,
+          atores: result.atores
+        });
         this.filmes.push(result)
         console.log(this.filmes)
       }
-        // set(ref(db, 'filmes/' + filmesId), {
-        //   titulo: result.atores,
-        //   lancamento: result.lancamento,
-        //   genero: result.genero,
-        //   diretor: result.diretor,
-        //   atores: result.atores
-        // });
+
       }
     });
   }
