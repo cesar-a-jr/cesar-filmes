@@ -1,0 +1,81 @@
+.home{
+  background-color: #111827;
+  color: #FFF;
+  height: 52px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.button-header{
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  background-color: #0891B2;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 0.875rem;
+  transition: 0.5s;
+}
+
+.button-header:hover{
+  background-color: #164E63;
+  color: #F5F5F5;
+  cursor: pointer;
+}
+
+.aria{
+  display: flex;
+  height: calc(100vh - 52px);
+  justify-content: center;
+  flex-direction: column;
+
+  background-image: url('../../assets/bg-image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: #FFF;
+}
+
+.left{
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.img-content{
+  height: 70px;
+  padding: 1rem;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
+
+.img-content:hover{
+  height: 72px;
+}
+
+.button-content{
+  width: 70%;
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  background-color: #0891B2;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 0.875rem;
+  transition: 0.5s;
+}
+
+.button-content:hover{
+  width: 75%;
+  background-color: #164E63;
+  color: #F5F5F5;
+  cursor: pointer;
+
+}
+

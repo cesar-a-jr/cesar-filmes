@@ -1,0 +1,17 @@
+<mat-toolbar class="home">
+  <img src="../../assets/Ticket.svg">
+  <span class="example-spacer"></span>
+  <button class="button-header" [routerLink]="''">Home</button>
+  <button class="button-header" [routerLink]="'/dashboard'">Dashboard</button>
+</mat-toolbar>
+
+<div class="content">
+  <h1>Realizar Login:</h1>
+  <firebase-ui
+    class="color"
+    (signInSuccessWithAuthResult)="successCallback($event)"
+    (signInFailure)="errorCallback($event)"
+    (uiShown)="uiShownCallback()"
+  ></firebase-ui>
+</div>
+

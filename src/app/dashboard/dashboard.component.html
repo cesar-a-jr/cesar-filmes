@@ -1,0 +1,54 @@
+<mat-toolbar class="home">
+  <img src="../../assets/Ticket.svg">
+  <span class="example-spacer"></span>
+  <button class="button-header" *ngIf="!isLoggedIn" [routerLink]="''">Home</button>
+  <button class="button-header"  *ngIf="!isLoggedIn" [routerLink]="'/login'">login</button>
+  <button class="button-header" *ngIf="!isLoggedIn" [routerLink]="'dashboard'">dashboard</button>
+  <button class="button-header" *ngIf="!isLoggedIn" [routerLink]="'cadastro'">cadastro</button>
+  <button class="button-header" *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+</mat-toolbar>
+
+
+<main class="aria">
+
+  <div class="top">
+    <button class="add-movie"  mat-button (click)="openDialog(null)">Adicionar filme</button>
+  </div>
+
+  <div class="content">
+
+    <div *ngFor="let filme of filmes" class="item">
+      <div class="left">
+        <img *ngIf="!filme.img_path" src='https://image.tmdb.org/t/p/w500{{filme.poster_path}}'  alt="">
+        <img *ngIf="!filme.poster_path" src='{{filme.img_path}}'  alt="">
+        <p>{{filme.release_date}}</p>
+      </div>
+      <div class="right">
+        <div>
+          <h2>{{filme.title}}</h2>
+          <p *ngIf="filme.genre">{{filme.genre}}</p>
+          <p>{{filme.overview}}</p>
+          <div>
+            <p *ngIf="filme.diretor">Diretor: {{filme.diretor}}</p>
+            <p *ngIf="filme.diretor">Atores: {{filme.atores}}</p>
+          </div>
+        </div>
+        <div class="fit">
+          <button class="edit" (click)="openDialog(filme)">
+            <fa-icon size="lg" [icon]="faEdit"></fa-icon >
+          </button>
+          <button class="delete" (click)="deleteMovie(filme.title)">
+            <fa-icon size="lg" [icon]="faTrashCan"></fa-icon >
+          </button>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+</main>
+
+

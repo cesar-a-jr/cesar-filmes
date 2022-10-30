@@ -23,7 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/custom-theme.scss",
+              "src/styles.css",
+              "node_modules/firebaseui/dist/firebaseui.css"
             ],
             "scripts": []
           },
@@ -90,12 +92,26 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/firebaseui/dist/firebaseui.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "cesar-filmes:build:production",
+            "firebaseProject": "cesarfilmes-6c171",
+            "firebaseHostingSite": "cesarfilmes-6c171"
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

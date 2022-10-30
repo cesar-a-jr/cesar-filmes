@@ -1,0 +1,58 @@
+input{
+  background-color: #1111;
+  padding: 5px;
+}
+
+.form-movie{
+  display: grid;
+  grid-template-columns: 1fr 1fr
+}
+
+.input-movie{
+  padding: 1rem;
+}
+
+.buttons{
+  width: 100%;
+  justify-content: space-around;
+}
+
+button:first-child{
+    border: none;
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem;
+    background-color: #b53333;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 0.875rem;
+    transition: 0.5s;
+}
+
+button:first-child:hover{
+  background-color: #de0202;
+
+}
+
+button:last-child{
+  border: none;
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  background-color: #0891B2;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 0.875rem;
+  transition: 0.5s;
+}
+
+button:last-child:hover{
+  background-color: #164E63;
+
+}
+.full-w{
+  display: grid;
+}
+
+.full-w textarea{
+  height: 4rem;
+
+}

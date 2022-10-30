@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cesarfilmes-6c171": {
+      "hosting": {
+        "cesar-filmes": [
+          "cesarfilmes-6c171"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cesarfilmes-6c171"
+  }
+}

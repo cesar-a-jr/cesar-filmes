@@ -1,0 +1,45 @@
+<h1 *ngIf="!isChange" mat-dialog-title>Adicionar Filme</h1>
+<h1 *ngIf="isChange" mat-dialog-title>Editar Filme</h1>
+
+<div mat-dialog-content >
+  <div class="form-movie">
+  <mat-form-field class="input-movie">
+    <label>Nome do Filme:</label>
+    <input matInput [(ngModel)]="data.title">
+  </mat-form-field>
+  <mat-form-field  class="input-movie">
+    <label>Data de lançamento:</label>
+    <input type="date" matInput [(ngModel)]="data.release_date">
+  </mat-form-field>
+  <mat-form-field class="input-movie">
+    <label>Gênero do filme:</label>
+    <input matInput [(ngModel)]="data.genre">
+  </mat-form-field>
+  <mat-form-field class="input-movie">
+    <label >Diretor:</label>
+    <input matInput [(ngModel)]="data.diretor">
+  </mat-form-field>
+  <mat-form-field class="input-movie">
+    <label>Atores:</label>
+    <input matInput [(ngModel)]="data.atores">
+  </mat-form-field>
+  <mat-form-field class="input-movie">
+    <label>Link da Imagem:</label>
+    <input matInput [(ngModel)]="data.img_path">
+  </mat-form-field>
+</div>
+<div class="full-w">
+  <mat-form-field class="input-movie">
+    <label>Descrição :</label>
+    <textarea  matInput [(ngModel)]="data.overview"></textarea>
+  </mat-form-field>
+</div>
+
+</div>
+<div class="buttons" mat-dialog-actions>
+  <button mat-button (click)="onCacelar()">Cancelar</button>
+  <button *ngIf="!isChange" mat-button [mat-dialog-close]="data" cdkFocusInitial>Adicionar</button>
+  <button  *ngIf="isChange" mat-button [mat-dialog-close]="data" cdkFocusInitial>Editar</button>
+</div>
+
+
