@@ -19,7 +19,7 @@
 
     <div *ngFor="let filme of filmes" class="item">
       <div class="left">
-        <img *ngIf="!filme.img_path" src='https://image.tmdb.org/t/p/w500{{filme.poster_path}}'  alt="">
+        <img *ngIf="filme.poster_path" src='https://image.tmdb.org/t/p/w500{{filme.poster_path}}'  alt="">
         <img *ngIf="!filme.poster_path" src='{{filme.img_path}}'  alt="">
         <p>{{filme.release_date}}</p>
       </div>
