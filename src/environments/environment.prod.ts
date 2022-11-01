@@ -10,3 +10,6 @@ export const environment = {
   },
   production: true
 };
+
+export const API_KEY = "?api_key=bfa456fe2cee4a56de98098d1375816f"
+export const API_PATH = "https://api.themoviedb.org/3"
