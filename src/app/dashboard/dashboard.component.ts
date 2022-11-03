@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
 import { onValue } from '@firebase/database';
 import { collection } from 'firebase/firestore';
 import { ElementDialogComponent } from '../shared/element-dialog/element-dialog.component';
-import { MoviesService } from '../shared/movies.service';
 import { faTrashCan, faEdit } from '@fortawesome/free-solid-svg-icons';
 
 //* INTERFACE BASE DE UM FILME
@@ -103,7 +102,6 @@ export class DashboardComponent implements OnInit {
 
 
   constructor(
-    private moviesService: MoviesService,
     public dialog: MatDialog,
     private router: Router,
     public database: Database,

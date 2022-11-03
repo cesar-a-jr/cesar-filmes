@@ -29,6 +29,8 @@
     "firebase": "^9.12.1",
     "firebaseui": "^6.0.1",
     "firebaseui-angular": "^6.1.2",
+    "lottie-web": "^5.9.6",
+    "ngx-lottie": "^9.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
